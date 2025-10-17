@@ -1,17 +1,40 @@
-Student Management System (minimal Flask demo)
+# AI-Powered Student Management System 🎓
 
-Quickstart
+This is a Project-Based Learning (PBL) project that implements a Student Management System using Django. The system includes role-based access for Admins, Teachers, and Students, and features an AI model to detect and flag "at-risk" students.
 
-1. Create and activate the virtualenv or use the provided `.venv`.
-2. Install dependencies:
+## 🚀 Key Features
 
-   "C:/Users/Priyanshi/Desktop/Student Management System/.venv/Scripts/python.exe" -m pip install -r requirements.txt
+### Admin
+* **Full System Control:** Admins use the built-in Django Admin Panel (`/admin`).
+* **User Management:** Create, Read, Update, and Delete Student and Teacher accounts.
+* **Course Management:** Create courses, assign teachers to courses, and enroll students in courses.
+* **Data Management:** Manage all grades and attendance records.
 
-3. Run the app:
+### Teacher
+* **Teacher Dashboard:** View a list of all assigned courses.
+* **Course View:** See a complete roster of students for each course.
+* **Gradebook:** Enter and update grades for students' assignments and quizzes.
+* **Attendance Module:** Mark student attendance (Present/Absent) for each class.
+* **🤖 AI Feature: At-Risk Detector:** Automatically see a visual "At-Risk" flag next to any student who is predicted to be in danger of failing, allowing for early intervention.
 
-   "C:/Users/Priyanshi/Desktop/Student Management System/.venv/Scripts/python.exe" app.py
+### Student
+* **Student Dashboard:** View all enrolled courses in one place.
+* **Progress Tracking:** See current grades and attendance percentage for each course.
+* **Report Generation:** Download a simple PDF report of semester grades.
 
-Notes
+## 🛠️ Tech Stack
 
-- `ai_model/predictor.py` will attempt to load `ai_model/at_risk_model.pkl`. If missing, a dummy prediction is returned.
-- This is a frontend-focused scaffold; connect a real database and authentication for production use.
+* **Backend:** **Python** with the **Django** framework
+* **Frontend:** **Django Templates** (HTML, CSS, JavaScript)
+* **Database:** **SQLite** (default for development)
+* **UI/Styling:** **Bootstrap 5**
+* **AI/ML:** **Scikit-learn** and **Pandas** for the prediction model
+
+## ⚙️ Setup and Installation
+
+Follow these steps to get the project running on your local machine.
+
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/YourUsername/YourRepoName.git](https://github.com/YourUsername/YourRepoName.git)
+cd pbl_project_root
