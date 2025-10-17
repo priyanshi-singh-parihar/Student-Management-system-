@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Student Dashboard{% endblock %}
+
+{% block content %}
+<div class="card">
+	<div class="card-body">
+		<h4 class="card-title">Welcome, {{ student }}</h4>
+		<p class="lead">Quick overview of your academic status</p>
+
+		<div class="row">
+			<div class="col-md-6">
+				<h5>At-risk prediction</h5>
+				<p>Prediction: <strong>{{ pred.prediction }}</strong></p>
+				{% if pred.probability is defined %}
+				<p>Risk probability: <strong>{{ "%.1f" % (pred.probability * 100) }}%</strong></p>
+				{% endif %}
+			</div>
+			<div class="col-md-6">
+				<h5>Actions</h5>
+				<ul>
+					<li><a href="#">View grades</a></li>
+					<li><a href="#">Contact teacher</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Course View{% endblock %}
+
+{% block content %}
+<div class="card">
+	<div class="card-body">
+		<h4>{{ course.name }}</h4>
+		<p>Students: {{ course.students|length }}</p>
+		<a class="btn btn-sm btn-primary" href="#">Manage Students</a>
+	</div>
+</div>
+{% endblock %}

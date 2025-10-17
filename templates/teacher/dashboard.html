@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Teacher Dashboard{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+	<h3>Welcome, {{ teacher }}</h3>
+	<a class="btn btn-sm btn-outline-primary" href="#">New Course</a>
+</div>
+
+<div class="row">
+	{% for c in courses %}
+	<div class="col-md-6">
+		<div class="card mb-3">
+			<div class="card-body">
+				<h5>{{ c.name }}</h5>
+				<p>{{ c.students }} students enrolled</p>
+				<a class="btn btn-sm btn-primary" href="{{ url_for('course_view', course_id=c.id) }}">View</a>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
+</div>
+{% endblock %}
